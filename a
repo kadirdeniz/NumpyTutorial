@@ -1,0 +1,73 @@
+import numpy as np
+
+a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(a)
+
+b = np.dtype('i4')
+print(b)
+
+c = np.array([(10),(20),(30)])
+print(c)
+
+d= np.array([[1,2,3],[4,5,6]])
+print(d)
+print(d.shape)#Satır Kolon Sayısı
+
+d.shape=(3,2)
+print(d)
+
+e=np.array([[1,2],[3,4],[5,6],[7,8]])
+f=e.reshape(2,4)# yeniden şekillendirir
+print(f)
+
+g = np.arange(2,24,3)#2 den 24 e kadar 3 er 3 er
+print(g)
+print('Kadir',a.ndim)
+
+h= np.array([1,2,3] , dtype=np.int8)
+print(h.itemsize)
+
+ı = np.array([1,2,3,4,5])
+print (ı.flags)#Don't know
+
+
+i  = np.empty([5,4],dtype=int,order='C')
+print(i)
+
+j  = np.empty([5,4],dtype=int,order='F')
+print(j)
+k=np.zeros((5,),dtype=np.int)
+print(k)
+
+l = np.zeros((2,2),dtype=[('x','i4'),('y','i4')])
+print(l)
+
+m = np.ones((5,2),dtype=[('x','i4'),('y','i4')])
+print(m)
+
+print(a.dtype)
+
+print(np.sum(d))#arrayin toplamı
+
+n = np.identity(3)
+print(n)
+
+o = np.random.randn(3,4)
+print(o)
+
+ö = np.arange(10)
+print(ö[5:])    
+print(ö[1:4])
+print(ö[:-4])
+
+p = np.arange(27).reshape(3,3,3)
+print(p)
+print(p[:,:,2])
+
+cities = np.array(['Istanbul','Paris','Berlin']) # Boolean Indexing
+city_data=np.array([[123,456,789],[987,654,321],[132,465,798]])
+print(city_data[cities=='Paris'])
+
+r = np.random.randn(5,3)
+print(r)
+print(np.modf(r))#Mod alıyor 
